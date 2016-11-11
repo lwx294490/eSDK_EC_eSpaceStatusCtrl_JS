@@ -1,0 +1,34 @@
+HKCR
+{
+	eSpaceStatusCtrl.StatusCtrl.1 = s 'StatusCtrl Class'
+	{
+		CLSID = s '{93A44D3B-7CED-454F-BBB4-EE0AA340BB78}'
+	}
+	eSpaceStatusCtrl.StatusCtrl = s 'StatusCtrl Class'
+	{
+		CLSID = s '{93A44D3B-7CED-454F-BBB4-EE0AA340BB78}'
+		CurVer = s 'eSpaceStatusCtrl.StatusCtrl.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {93A44D3B-7CED-454F-BBB4-EE0AA340BB78} = s 'StatusCtrl Class'
+		{
+			ProgID = s 'eSpaceStatusCtrl.StatusCtrl.1'
+			VersionIndependentProgID = s 'eSpaceStatusCtrl.StatusCtrl'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			ForceRemove 'Control'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 103'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '%OLEMISC%'
+			}
+			'TypeLib' = s '{CB1BFE5C-FBEA-47D3-AC0A-D7D043CA9F04}'
+			'Version' = s '1.0'
+		}
+	}
+}

@@ -1,0 +1,59 @@
+// eSpaceStatusCtrl.idl : eSpaceStatusCtrl 的 IDL 源
+//
+
+// 此文件将由 MIDL 工具处理以
+// 产生类型库(eSpaceStatusCtrl.tlb)和封送处理代码。
+
+#include "olectl.h"
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(EE967682-67F9-49FD-87A6-826389DABFDF),
+	dual,
+	nonextensible,
+	helpstring("IStatusCtrl 接口"),
+	pointer_default(unique)
+]
+interface IStatusCtrl : IDispatch{
+    [id(1), helpstring("方法ShowUI")] HRESULT ShowUI([in] VARIANT_BOOL bShow, [in] ULONG x, [in] ULONG y);
+    [propget, id(2), helpstring("属性 OnUserStatusChange")] HRESULT OnUserStatusChange([out, retval] VARIANT* pVal);
+    [propput, id(2), helpstring("属性 OnUserStatusChange")] HRESULT OnUserStatusChange([in] VARIANT newVal);
+    [id(3), helpstring("方法GetStatus")] HRESULT GetStatus([in] BSTR account, [in] BSTR id);
+    [id(4), helpstring("方法SetUserInfo")] HRESULT SetUserInfo([in] BSTR strAccount, [in] BSTR staffNo, [in] BSTR strName, [in]LONG status);
+    [propget, id(5), helpstring("属性 OneSpaceEvent")] HRESULT OneSpaceEvent([out, retval] VARIANT* pVal);
+    [propput, id(5), helpstring("属性 OneSpaceEvent")] HRESULT OneSpaceEvent([in] VARIANT newVal);
+    [id(6), helpstring("方法Login")] HRESULT Login([in] BSTR account, [in] BSTR pwd, [in] LONG type);
+
+};
+
+
+[
+	uuid(CB1BFE5C-FBEA-47D3-AC0A-D7D043CA9F04),
+	version(1.0),
+	helpstring("eSpaceStatusCtrl 1.0 类型库")
+]
+library eSpaceStatusCtrlLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(6B104C1E-4D4E-43CE-AE36-AD202AF4B551),
+		helpstring("_IStatusCtrl事件接口")
+	]
+	dispinterface _IStatusCtrlEvents
+	{
+		properties:
+		methods:
+	};
+	[
+		uuid(93A44D3B-7CED-454F-BBB4-EE0AA340BB78),
+		helpstring("StatusCtrl Class")
+	]
+	coclass StatusCtrl
+	{
+		[default] interface IStatusCtrl;
+		[default, source] dispinterface _IStatusCtrlEvents;
+	};
+
+};

@@ -1,0 +1,115 @@
+﻿
+-- body
+{
+	padding: 0;
+	font: 12px "宋体";
+}
+#lib_Tab1
+{
+	width: 673px;
+	padding: 0px;
+	margin-bottom: 15px;
+	height: 522px;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+}
+#lib_Tab2
+{
+	width: 576px;
+	margin: 0px;
+	padding: 0px;
+	margin-bottom: 15px;
+}
+.lib_tabborder
+{
+	border: 1px solid #95C9E1;
+}
+.lib_Menubox
+{
+	height: 30px;
+	line-height: 30px;
+	position: relative;
+}
+.lib_Menubox ul
+{
+	padding: 0px;
+	list-style: none;
+	position: absolute;
+	top: 3px;
+	left: 0;
+	margin-left: 10px;
+	height: 25px;
+	text-align: center;
+	width: 575px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.lib_Menubox li
+{
+	float: left;
+	display: block;
+	cursor: pointer;
+	width: 114px;
+	color: #949694;
+	font-weight: bold;
+	margin-right: 2px;
+	height: 25px;
+	line-height: 25px;
+	background-color: #E4F2FD;
+}
+.lib_Menubox li.hover
+{
+	padding: 0px;
+	background: #fff;
+	width: 116px;
+	border-left: 1px solid #95C9E1;
+	border-top: 1px solid #95C9E1;
+	border-right: 1px solid #95C9E1;
+	color: #739242;
+	height: 25px;
+	line-height: 25px;
+}
+.lib_Contentbox
+{
+	clear: both;
+	margin-top: 0px;
+	border-top: none;
+	height: 471px;
+	text-align: center;
+	padding-top: 8px;
+}
+-- > .style1
+{
+	width: 100%;
+}
+.style1
+{
+	width: 669px;
+	height: 232px;
+}
+#con_one_1
+{
+	text-align: left;
+	height: 477px;
+}
+.style3
+{
+	width: 100%;
+	height: 226px;
+}
+.style4
+{
+	height: 24px;
+	text-align: center;
+}
+.style6
+{
+	height: 21px;
+	text-align: center;
+}
+.style7
+{
+	height: 23px;
+}

@@ -1,0 +1,27 @@
+HKCR
+{
+	eSpaceStatusCtrl.eSpaceStatusEvent.1 = s 'eSpaceStatusEvent Class'
+	{
+		CLSID = s '{2F810FEE-C896-4C87-9F2C-2199B154EAB1}'
+	}
+	eSpaceStatusCtrl.eSpaceStatusEvent = s 'eSpaceStatusEvent Class'
+	{
+		CLSID = s '{2F810FEE-C896-4C87-9F2C-2199B154EAB1}'
+		CurVer = s 'eSpaceStatusCtrl.eSpaceStatusEvent.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {2F810FEE-C896-4C87-9F2C-2199B154EAB1} = s 'eSpaceStatusEvent Class'
+		{
+			ProgID = s 'eSpaceStatusCtrl.eSpaceStatusEvent.1'
+			VersionIndependentProgID = s 'eSpaceStatusCtrl.eSpaceStatusEvent'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{CB1BFE5C-FBEA-47D3-AC0A-D7D043CA9F04}'
+		}
+	}
+}
