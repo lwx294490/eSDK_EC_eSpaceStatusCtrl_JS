@@ -22,7 +22,7 @@
 *查询用户状态*
 
 
-	                <td style="text-align: center" bgcolor="#EEF7FF"><span><img id="Img0" border="0" onload="OneSpaceStatsCtrl('w00327180', 'w00327180', 'wangxin w00327180',this)" src="Image/offline.gif" style="margin-left: 3px;" />wangxin w00327180</span></td>
+	                <td style="text-align: center" bgcolor="#EEF7FF"><span><img id="Img0" border="0" onload="OneSpaceStatsCtrl('xxxxxxxx', 'xxxxxxxx', 'xxxxxxxx',this)" src="Image/offline.gif" style="margin-left: 3px;" />wangxin w00327180</span></td>
 	        		<td style="text-align: center" bgcolor="#EEF7FF">DEV</td>
 
 
